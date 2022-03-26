@@ -26,10 +26,10 @@ public class PostoMain {
 		do {
 			aux = 1;
 			
-			System.out.println("Selecione uma opÃ§Ã£o de Combustivel"
+			System.out.println("Selecione uma opção de Combustivel"
 					+ "\n1 -> Gasolina"
 					+ "\n2 -> Etanol"
-					+ "\nOpÃ§Ã£o: ");
+					+ "\nopção: ");
 			int op = e.nextInt();
 			
 			if (op == 1) {
@@ -43,7 +43,7 @@ public class PostoMain {
 					bombaEtanol.abastecer(c);
 				}
 			} else {
-				System.out.println("OpÃ§Ã£o invalida");
+				System.out.println("opção invalida");
 				aux = 0;
 			} 
 		} while(aux == 0);

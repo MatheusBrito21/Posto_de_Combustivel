@@ -27,12 +27,12 @@ public class Bomba {
 	public void setBombaAtual(double bombaAtual) {
 		this.bombaAtualL = bombaAtual;
 	}
-	//Pressupondo que todos os ve√≠culos 
-	//est√£o com tanque vazio e os ter√£o completados,
+	//Pressupondo que todos os veÌculos 
+	//est„o com tanque vazio e os ter„o completados,
 	public void abastecer(Carros carro) {
 		try {
 			//caso o carro nao possa ser abastecido com Etanol
-			//o metodo ir√° lan√ßar uma RuntimeExcepion 
+			//o metodo ir· lanÁar uma RuntimeExcepion 
 			if(carro.consumoEtanol == 0 
 					&& this.tipoCombustivel.equalsIgnoreCase("etanol")) {
 				throw new CombustivelException();
@@ -55,7 +55,7 @@ public class Bomba {
 						+ " " + carro.placa 
 						+ "\nCombustivel:" + tipoCombustivel
 						+ "\nTotal abastecido(L):" + carro.getTanqueAtual()
-						+ "\nPre√ßo Total:R$"+precoFinal);
+						+ "\nPreÁo Total:R$"+precoFinal);
 				statusBomba(litrosCombustivel - 1);
 			}else {
 				//se o tanque ja estiver cheio
@@ -63,7 +63,7 @@ public class Bomba {
 						"\n" + data
 						+ "\n"+carro.modelo
 						+ " " + carro.placa 
-						+ "\nO tanque do carro est√° cheio!");
+						+ "\nO tanque do carro est· cheio!");
 			}
 		} catch (CombustivelException e) {
 			System.out.println(
@@ -71,7 +71,7 @@ public class Bomba {
 					"\n" + data
 					+ "\n"+carro.modelo
 					+ " " + carro.placa 
-					+ "\nN√£o pode ser abastecido com Etanol!");
+					+ "\nN„o pode ser abastecido com Etanol!");
 		}
 	}
 	//calcula o preco final do abastecimento
@@ -95,12 +95,12 @@ public class Bomba {
 		//do ultimo abastecimento
 		setBombaAtual(bombaAtualL - combustivel);
 		if(getBombaAtual() == 0) {
-			System.out.println("A bomba de combust√≠vel est√° vazia!");
+			System.out.println("A bomba de combustÌvel est· vazia!");
 		}else {
 			
 			System.out.println(
 					"\n\nBomba atual(L):"+getBombaAtual()+"/"+capacidade
-					+"\nCombust√≠vel:"+ tipoCombustivel
+					+"\nCombustÌvel:"+ tipoCombustivel
 					+"\nTotal abastecido(L):"+(capacidade - getBombaAtual())
 					+linhasFormat());
 		}
@@ -108,7 +108,7 @@ public class Bomba {
 	}
 	
 	//imprime um conjunto de linhas
-	//para ajudar na formata√ß√£o e visualiza√ß√£o no console
+	//para ajudar na formataÁ„o e visualizaÁ„o no console
 	public String linhasFormat() {
 		return "\n-----------------------";
 	}
